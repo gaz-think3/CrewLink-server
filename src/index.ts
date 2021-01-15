@@ -24,8 +24,8 @@ const app = express();
 let server: HttpsServer | Server;
 if (httpsEnabled) {
 	server = new HttpsServer({
-		key: readFileSync(join(sslCertificatePath, 'privkey.pem')),
-		cert: readFileSync(join(sslCertificatePath, 'fullchain.pem'))
+		key: readFileSync(join(sslCertificatePath, 'server.key')),
+		cert: readFileSync(join(sslCertificatePath, 'server.crt'))
 	}, app);
 } else {
 	server = new Server(app);
