@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 import express from 'express';
 import { Server } from 'http';
 import { Server as HttpsServer } from 'https';
